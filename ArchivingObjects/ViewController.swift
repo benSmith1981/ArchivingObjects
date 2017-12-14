@@ -12,6 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let user = User.init()
+        user.email = "g@g.com"
+        user.storeUsernameAndIDToDefaults(key: "user1")
+        
+        let retrievedUser = User.retrieveFromUserDefaults(key: "user1")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
